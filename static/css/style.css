@@ -1,0 +1,128 @@
+/* Navbar styling */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+}
+
+/* Navbar links */
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Navbar brand */
+.navbar-brand {
+    font-size: 28px;
+}
+
+/* Change background color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Body styling */
+body {
+    padding-top: 100px;
+    background-color: #f0f2f5;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header styling */
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Button container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Record and Play buttons */
+.record-btn, .play-btn {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #6e00ff, #00d4ff);
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.record-btn::before, .play-btn::before {
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: pulse 1.5s infinite;
+}
+
+.record-btn:hover, .play-btn:hover {
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.record-btn:active, .play-btn:active {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(0.95);
+}
+
+/* Button icons */
+.record-btn .icon, .play-btn .icon {
+    font-size: 40px;
+    color: white;
+    z-index: 1;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* Stop button */
+.stop-btn {
+    display: none;
+}
+
+/* Recognized text */
+#recognized-text {
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Response container */
+#response-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Text adjustment */
+.text-adjust {
+    color: #333;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
